@@ -1,7 +1,7 @@
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-file = str("D:\\big_data\output_complete_file.txt")
+file = str("\\files\output_complete_file.txt")
 initial_data_frame = pd.read_csv(file, header=None, names=["brand", "rating", "topic", "word", "score"])
 
 initial_data_frame["pos_score"] = float(0)
@@ -104,4 +104,4 @@ df['Compound'] = abs(((df['Compound'] - df['Compound'].mean()) / (df['Compound']
 print(df)
 
 #Output to csv
-df.to_csv(str("D:\\big_data\opinion_mining.csv"), sep=",", header=True, index=True, line_terminator="\n")
+df.to_csv(str("\\files\opinion_mining_output.csv"), sep=",", header=True, index=True, line_terminator="\n")
